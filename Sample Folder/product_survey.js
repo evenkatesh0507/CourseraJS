@@ -7,23 +7,21 @@ function submitFeedback() {
     const productType = document.getElementById('productType').value;
     const feedback = document.getElementById('feedbackText').value;
 
-    const submitButton=document.getElementById('submitBtn');
-    submitButton.onclick = submitFeedback;
-    alert('Thank you for your valuable feedback');
-
-    document.getElementById('userName').innerHTML = username;
-    document.getElementById('userAge').innerHTML = age;
-    document.getElementById('userEmail').innerHTML = email;
-    document.getElementById('userJob').innerHTML = job;
-    document.getElementById('userDesignation').innerHTML = designation;
-    document.getElementById('userProductChoice').innerHTML = productType;
-    document.getElementById('userFeedback').innerHTML = feedback;
+    document.getElementById('userName').innerText = username;
+    document.getElementById('userAge').innerText = age;
+    document.getElementById('userEmail').innerText = email;
+    document.getElementById('userJob').innerText = job;
+    document.getElementById('userDesignation').innerText = designation;
+    document.getElementById('userProductChoice').innerText = productType;
+    document.getElementById('userFeedback').innerText = feedback;
 
     document.getElementById('userInfo').style.display = 'block';
+
+    alert('Thank you for your valuable feedback');
 }
 
 document.addEventListener('keydown', function(event) {
-   if (event.key === 'Enter') {
-     submitFeedback();
-   }
- });
+    if (event.key === 'Enter') {
+        submitFeedback();
+    }
+});
